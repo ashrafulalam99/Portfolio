@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+body.dark-mode .nav-item {
+    color: #f9f9f9;
+}
+
+.nav-item.active {
+    font-weight: 700;
+    cursor: default;
+    color: #014673;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#dark-mode-toggle {
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #034b7c;
+    background-color: #024979;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #036fb3;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #f9f9f9;
+    color: #222;
+    border: 1px solid #f9f9f9;
+}
+
+main section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: #42667c;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0b4871;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0267a6;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f1f1f1;
+    color: #555;
+    margin-top: auto;
+}
+
+body.dark-mode .footer {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #ddd;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    body.dark-mode .nav-links {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+    }
+}
