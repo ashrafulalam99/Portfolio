@@ -42,6 +42,35 @@ body.dark-mode .contact-form-box {
     margin-bottom: 1rem;
 }
 
+.social-links {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.social-links a {
+    background-color: #bcd2e0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 7px 12px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    color: #1d282c;
+    gap: 6px;
+    transition: 0.25s;
+}
+
+body.dark-mode .social-links a {
+    background-color: #ffffff;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -92,38 +121,10 @@ body.dark-mode #contactForm button {
 }
 
 #formMsg {
+    text-align: center;
     margin-top: 0.8rem;
     font-size: 0.9rem;
     font-weight: 500;
-}
-
-.social-links {
-    margin-top: 1.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-}
-
-.social-links a {
-    background-color: #bcd2e0;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 7px 12px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    color: #1d282c;
-    gap: 6px;
-    transition: 0.25s;
-}
-
-body.dark-mode .social-links a {
-    background-color: #ffffff;
-}
-
-.social-links a:hover {
-    transform: translateY(-2px);
 }
 
 @media (max-width: 850px) {

@@ -21,14 +21,12 @@
     color: var(--nav-bg);
 }
 
-/* Skill tags layout */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-/* Individual tag */
 .skill-tags span {
     background: #eef2ff;
     color: #1e3a8a;
@@ -45,14 +43,12 @@
     transform: translateY(-2px);
 }
 
-/* Dark mode */
 body.dark-mode .skill-tags span {
     background: #1e293b;
     color: #60a5fa;
     border: 1px solid #334155;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .skills-page {
         padding: 3rem 6%;

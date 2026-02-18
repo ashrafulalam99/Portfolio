@@ -1,0 +1,158 @@
+.education-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 5%;
+}
+
+.education-page h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.edu-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.8rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.edu-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.edu-box h2 {
+    margin-bottom: 0.3rem;
+}
+
+.edu-box h3 {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #6b7280;
+}
+
+.result {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.edu-box h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+/* two column course layout */
+.course-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+}
+
+.course-list li {
+    background: #eef2ff;
+    color: #1e3a8a;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    border: 1px solid #c7d2fe;
+}
+
+body.dark-mode .course-list li {
+    background: #1e293b;
+    color: #60a5fa;
+    border: 1px solid #334155;
+}
+
+.activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.activity-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    flex: 1 1 45%;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+}
+
+.activity-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.activity-card a {
+    color: #024776;
+    font-weight: 600;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.activity-card a:hover {
+    text-decoration: underline;
+}
+
+.activity-card a::after {
+    content: " ↗";
+    font-size: 0.85rem;
+}
+
+.activity-duration {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 0.6rem;
+}
+
+.activity-desc {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Dark mode for activity cards */
+body.dark-mode .activity-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body.dark-mode .activity-duration,
+body.dark-mode .activity-desc {
+    color: #cbd5e1;
+}
+
+body.dark-mode .activity-card h3 a {
+    color: #60a5fa;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .activities-container {
+        flex-direction: column;
+    }
+}
