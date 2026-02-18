@@ -61,6 +61,11 @@ body.dark-mode .project-card {
     border: 1px solid #333;
 }
 
+body.dark-mode .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(121, 121, 121, 0.15);
+}
+
 body.dark-mode .project-info h3 {
     color: #4db8ff;
 }

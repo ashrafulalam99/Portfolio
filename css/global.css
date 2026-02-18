@@ -103,6 +103,10 @@ h1, h2 {
     color: #42667c;
 }
 
+body.dark-mode h1, h2 {
+    color:#3b90c9
+}
+
 body.dark-mode p {
     color:#eef3f6
 }

@@ -1,12 +1,27 @@
 const darkToggle = document.getElementById("dark-mode-toggle");
 
-// Toggle dark mode and update icon when button is clicked
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    if (darkToggle) darkToggle.textContent = "🌞";
+} else {
+    if (darkToggle) darkToggle.textContent = "🌙";
+}
+
+// Toggle dark mode and save preference
 if (darkToggle) {
     darkToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
 
-        darkToggle.textContent =
-            document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
+        if (document.body.classList.contains("dark-mode")) {
+            darkToggle.textContent = "🌞";
+            localStorage.setItem("theme", "dark"); // save dark mode
+        } else {
+            darkToggle.textContent = "🌙";
+            localStorage.setItem("theme", "light"); // save light mode
+        }
     });
 }
 
