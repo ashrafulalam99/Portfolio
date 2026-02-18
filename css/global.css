@@ -103,6 +103,10 @@ h1, h2 {
     color: #42667c;
 }
 
+body.dark-mode p {
+    color:#eef3f6
+}
+
 p {
     margin-bottom: 1rem;
 }
